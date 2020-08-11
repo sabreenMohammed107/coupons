@@ -139,9 +139,11 @@
             <div class="form-submit">
                 <input type="submit" name="submit" id="submit" class="submit" style="font-size:16px" value=" احصل على كوبون الخصم" />
             </div>
-        </form>
+        </form><?php
+         $url = 'http://coupons.seniorsteps.net/' ;
+        ?>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<a href="https://api.whatsapp.com/send?phone=01097003465&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+<a href="https://api.whatsapp.com/send?phone=01097003465&text=http://coupons.seniorsteps.net/" class="float" target="_blank">
 <i class="fa fa-whatsapp my-float"></i>
 </a>
     </div>
