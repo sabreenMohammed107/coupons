@@ -16,7 +16,17 @@
                 <label for="agree-term" class="label-agree-term"><b >ملحوظة : </b>  يتم ربط الكوبون برقم موبايل 1 فقط خاص بالطالب ولا يمكن استخدامه مع كوبون اخر طالما الكوبون الحالى نشط للإستخدام - وكل كوبون خصم يكون له تاريخ إنتهاء يجب ألا يتخطاه ويتم الغاءه تلقائيا
 </label>
             </div>
-               
+            <div class="footer">
+        <footer class="footer">
+        <!-- <a href="https://api.whatsapp.com/send?phone=15551234567&text=I'm%20interested%20in%20your%20car%20for%20sale" class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://www.facebook.com/seniorsteps.it/" target="_blank" class="float2">
+            <i style="margin: 10px;" class="fa fa-facebook my-float fa-2x"></i>
+        </a>
+</footer>
+            </div>     
         </div>
 
     </div>

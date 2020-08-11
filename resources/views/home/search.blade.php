@@ -28,6 +28,21 @@
         display: inline;
 
     }
+    
+  
+
+  
+
+    .my-float {
+        margin-top: 16px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .respo {
+            margin: 10px 0 0 10px !important;
+        }
+       
+    }
 </style>
 
 @endsection
@@ -36,11 +51,20 @@
 @section('content')
 <div class="main">
 
+
     <div class="container" style="direction: rtl;width: 686px !important">
-        <img src="{{ asset('webasset/images/logo.jpg')}}" style="width:200px;hieght:200px">
-        <div class="form-submit" style="margin: 0 30px;">
-                <a style="text-decoration: none;font-size:16px" href="{{route('home.index')}}" class="submit"  >احصل على كوبون خصم</a>
+        <div style="width:100%;">
+            <div style="display: inline-block;width:40%">
+                <img src="{{ asset('webasset/images/logo.jpg')}}" style="width:200px;hieght:200px">
+
             </div>
+
+            <div style="display: inline;width:55%">
+                <a style="text-decoration: none;font-size:16px;float:left;margin:30px 0 0 20px" href="{{ route('search') }}" class="submit respo">البحث عن بيانات كوبون معين
+                </a>
+            </div>
+
+        </div>
         <form method="POST" action="{{route('fetch-result')}}" class="appointment-form" style="padding: 0px 60px 0px 60px;" id="appointment-form">
             <input type="hidden" value="{{csrf_token()}}" id="catToken" />
             <h2 style="text-align:center;margin-bottom: 10px;">البحث عن كوبون الخصم</h2>

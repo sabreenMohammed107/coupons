@@ -11,7 +11,16 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="{{ asset('webasset/css/style.css')}}">
-
+<style>
+        .footer {
+  height: 50px;
+  background-color: brown;
+}
+.float2{
+    margin-right: 50%;
+    
+}
+</style>
     @yield('style')
 
 
