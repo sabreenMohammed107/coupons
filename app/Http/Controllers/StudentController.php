@@ -34,6 +34,12 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function home()
+    {
+        $durations = Duration::all();
+        $courses = Course::all();
+        return view('home.register', compact('durations', 'courses'));
+    }
     public function index()
     {
         $durations = Duration::all();

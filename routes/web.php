@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'StudentController@home');
 
 Route::resource('/home', 'StudentController');
 Route::get('/search', 'StudentController@search')->name('search');
