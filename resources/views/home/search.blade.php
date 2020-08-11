@@ -48,7 +48,7 @@
                 <input type="text" name="phone" id="phone" placeholder="رقم الموبايل المسجل " required />
 
                 <span id="phonerror" style="color:red;background:#ccc;text-align:center;margin-bottom:20px;display:none">يجب ان تدخل رقم الموبايل </span>
-                <span id="rrorResult" style="color:red;background:#ccc;text-align:center;margin-bottom:20px;display:none">رقم الموبايل غير مسجل </span>
+                <span id="rrorResult" style="color:red;background:#ccc;text-align:center;margin-bottom:20px;display:none">هذا الرقم غير مسجل /او لايوجد لديه  كوبونات مفعلة</span>
 
 
             </div>
