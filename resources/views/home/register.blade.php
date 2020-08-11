@@ -30,7 +30,24 @@
         display: inline;
 
     }
+    .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
 
+.my-float{
+	margin-top:16px;
+}
     @media only screen and (max-width: 600px) {
   .respo {
     margin: 10px 0 0 10px !important;
@@ -79,8 +96,9 @@
         {{ csrf_field() }}
             <h2 style="text-align:center;margin-bottom: 10px;"> احصل على كوبون خصم </h2>
             <div class="form-group-1">
-                <input type="text" name="name" id="name" placeholder="الإسم بالكامل" required />
-                <input type="text" name="mobile" value="{{ old('mobile') }}" id="phone" placeholder="رقم التليفون (يفضل رقم الواتساب)" required />
+                <input type="text" name="name" id="name" pattern="[^0-9]*" placeholder="الإسم بالكامل" required />
+                <input type="text" name="mobile" value="{{ old('mobile') }}" id="phone" pattern="[0]{1}[0-9]{10}" 
+       title="Phone number with 0 and remaing 10 digit with 0-9" placeholder="رقم التليفون (يفضل رقم الواتساب)" required />
                 <input type="text" name="job" id="job" placeholder="الوظيفه" />
 
                 <input type="text" name="education" id="education" placeholder="الدراسة" />
@@ -122,6 +140,10 @@
                 <input type="submit" name="submit" id="submit" class="submit" style="font-size:16px" value=" احصل على كوبون الخصم" />
             </div>
         </form>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=01097003465&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
     </div>
 
 </div>

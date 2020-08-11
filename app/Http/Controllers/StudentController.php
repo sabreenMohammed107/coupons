@@ -88,7 +88,7 @@ class StudentController extends Controller
         }
         if ($randomCoupon) {
             if ($count > 0) {
-                return redirect()->back()->withInput()->with('flash_success', 'لديك خصم على هذا الرقم!');
+                return redirect()->back()->withInput()->with('flash_success', 'لديك خصم على هذا الرقم ابحث عن الكوبون !');
             } else {
 
 
