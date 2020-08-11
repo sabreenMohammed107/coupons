@@ -90,7 +90,8 @@ class StudentController extends Controller
      if($randomCoupon){
    if($count>0){
     return redirect()->back()->withInput()->with('flash_success', 'لديك خصم على هذا الرقم!');
-        }else{
+        
+}else{
 
 
         DB::transaction(function () use ($data, $durations, $courses, $randomCoupon, $request) {
@@ -139,7 +140,7 @@ class StudentController extends Controller
     public function searchResult(Request $request)
     {
         $mobile = $request->input('phone');
-        $student = Student_data::where('mobile', $mobile)->firstOrFail();
+        $student = Student_data::where('mobile', $mobile)->first();
         $coupon = Coupon_data::where('coupon_status', 2)->where('student_id', $student->id)->first();
         return view('home.result', compact('coupon'))->render();
     }
