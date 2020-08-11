@@ -36,12 +36,30 @@
     .my-float {
         margin-top: 16px;
     }
-
+    .faSize{
+        font-size: 2em;
+       }
+    .resSpan{
+            
+            float: left;
+            padding-left: 20px;
+            font-size: 18px;
+        
+                }
     @media only screen and (max-width: 600px) {
         .respo {
             margin: 10px 0 0 10px !important;
         }
-       
+        .resSpan{
+            
+    float: left;
+    padding-left: 20px;
+    font-size: 10px;
+
+        }
+       .faSize{
+        font-size: 1em;
+       }
     }
 </style>
 
@@ -60,7 +78,7 @@
             </div>
 
             <div style="display: inline;width:55%">
-                <a style="text-decoration: none;font-size:16px;float:left;margin:30px 0 0 20px" href="{{ route('search') }}" class="submit respo">البحث عن بيانات كوبون معين
+                <a style="text-decoration: none;font-size:16px;float:left;margin:30px 0 0 20px" href="{{ route('home.index') }}" class="submit respo">العودة للحصول على كوبون جديد 
                 </a>
             </div>
 

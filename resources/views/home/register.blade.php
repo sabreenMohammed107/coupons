@@ -35,12 +35,30 @@
     .my-float {
         margin-top: 16px;
     }
-
+    .faSize{
+        font-size: 2em;
+       }
+    .resSpan{
+            
+            float: left;
+            padding-left: 20px;
+            font-size: 18px;
+        
+                }
     @media only screen and (max-width: 600px) {
         .respo {
             margin: 10px 0 0 10px !important;
         }
-   
+        .resSpan{
+            
+            float: left;
+            padding-left: 20px;
+            font-size: 10px;
+        
+                }
+               .faSize{
+                font-size: 1em;
+               }
     }
 
 </style>
@@ -126,7 +144,7 @@
                 </label>
             </div>
             <div class="form-submit">
-                <input type="submit" name="submit" id="submit" class="submit" style="font-size:16px" value=" احصل على كوبون الخصم" />
+           <input type="submit" name="submit" id="submit" class="submit" style="font-size:16px" value=" احصل على كوبون الخصم" > <i class="fa fa-arrow-alt-circle-left fa-2x"></i> 
             </div>
         </form>
         <div class="footer">
@@ -134,10 +152,12 @@
         <!-- <a href="https://api.whatsapp.com/send?phone=15551234567&text=I'm%20interested%20in%20your%20car%20for%20sale" class="float" target="_blank">
             <i class="fa fa-whatsapp my-float"></i>
         </a> -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <a href="https://www.facebook.com/seniorsteps.it/" target="_blank" class="float2">
-            <i style="margin: 10px;" class="fa fa-facebook my-float fa-2x"></i>
+        <i style="margin: 3px 10px; padding: 7px 10px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-facebook my-float faSize"></i>
         </a>
+       <span class="resSpan" >
+        <i style="margin: 3px 10px; padding: 7px 10px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-phone my-float "></i>01097003465
+</span>
 </footer>
             </div>
        
