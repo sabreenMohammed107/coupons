@@ -12,10 +12,10 @@
 		</div></div>
 		
                
-                <div class="form-check">
-                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                    <label for="agree-term" class="label-agree-term">I agree to the  <a href="#" class="term-service">Terms and Conditions</a></label>
-                </div>
+        <div class="form-check">
+                <label for="agree-term" class="label-agree-term"><b >ملحوظة : </b>  يتم ربط الكوبون برقم موبايل 1 فقط خاص بالطالب ولا يمكن استخدامه مع كوبون اخر طالما الكوبون الحالى نشط للإستخدام - وكل كوبون خصم يكون له تاريخ إنتهاء يجب ألا يتخطاه ويتم الغاءه تلقائيا
+</label>
+            </div>
                
         </div>
 

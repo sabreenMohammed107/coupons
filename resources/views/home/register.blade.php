@@ -30,6 +30,12 @@
         display: inline;
 
     }
+
+    @media only screen and (max-width: 600px) {
+  .respo {
+    margin: 10px 0 0 10px !important;
+  }
+}
 </style>
 @endsection
 
@@ -40,10 +46,19 @@
 <div class="main">
 
     <div class="container" style="direction: rtl;width: 686px !important">
+    <div style="width:100%;">
+        <div style="display: inline-block;width:40%">
         <img src="{{ asset('webasset/images/logo.jpg')}}" style="width:200px;hieght:200px">
-        <div class="form-submit" style="margin: 0 30px;">
-                <a style="text-decoration: none;font-size:16px" href="{{ route('search') }}" class="submit"  >البحث عن كوبون خصم</a>
-            </div>
+
+        </div>
+       
+        <div style="display: inline;width:55%">
+                <a style="text-decoration: none;font-size:16px;float:left;margin:30px 0 0 20px" href="{{ route('search') }}" class="submit respo"  >البحث عن بيانات كوبون معين
+</a>
+        </div>
+      
+    </div>
+        
             @if(Session::has('flash_success'))
                 <div style="width:100%;background:red;text-align:center;margin-top:20px">
                     <div class="alert alert-success">
@@ -100,8 +115,8 @@
             </div>
 
             <div class="form-check">
-                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                <label for="agree-term" class="label-agree-term">I agree to the <a href="#" class="term-service">Terms and Conditions</a></label>
+                <label for="agree-term" class="label-agree-term"><b >ملحوظة : </b>  يتم ربط الكوبون برقم موبايل 1 فقط خاص بالطالب ولا يمكن استخدامه مع كوبون اخر طالما الكوبون الحالى نشط للإستخدام - وكل كوبون خصم يكون له تاريخ إنتهاء يجب ألا يتخطاه ويتم الغاءه تلقائيا
+</label>
             </div>
             <div class="form-submit">
                 <input type="submit" name="submit" id="submit" class="submit" style="font-size:16px" value=" احصل على كوبون الخصم" />
