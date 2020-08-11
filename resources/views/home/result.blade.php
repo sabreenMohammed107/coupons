@@ -7,8 +7,14 @@
   <p style="color:red; font-size:20px;margin-top:0"><b>قيمة الخصم : </b><span  id="couponPer">{{$coupon->discount_per}}</span> %.</p>
  <p style="color:#73AD21; font-size:20px;margin-top:0"><b>على رقم الموبايل : </b><span  id="couponMobile">{{$coupon->student->mobile ?? ''}}</span></p>
   <hr>
-  <?php $date = date_create($coupon->expired_date) ?>
-  <p style="color:red; font-size:16px">سوف ينتهى فى :<span id="couponDate"> {{ date_format($date,"d-m-Y") }}</span></p>
+  <?php 
+  $date=null;
+  if($coupon->expired_date){
+    $date = date_create($coupon->expired_date) ;
+
+  }
+  ?>
+  <p style="color:red; font-size:16px">سوف ينتهى فى :<span id="couponDate"> @if($date){{ date_format($date,"d-m-Y")  }}@endif</span></p>
 		</div></div>
 		
                
