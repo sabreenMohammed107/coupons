@@ -28,9 +28,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $rows=Coupon_data::with('student')->whereNotNull('student_id')->get();
-        return view($this->viewName . 'index',compact('rows'));   
-     }
+        $rows = Coupon_data::with('student')->whereNotNull('student_id')->get();
+        return view($this->viewName . 'index', compact('rows'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -39,7 +39,8 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        $rows = Coupon_data::with('student')->whereNotNull('student_id')->get();
+        return view($this->viewName . 'index', compact('rows'));
     }
 
     /**
@@ -50,7 +51,6 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
@@ -84,7 +84,17 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $coupon = Coupon_data::where('id', $id)->first();
+       
+        $data = [
+            'coupon_status' => $request->input('coupon_status'),
+            'adminNotes' => $request->input('adminNotes'),
+
+        ];
+
+
+        $coupon->update($data);
+        return redirect()->back()->with('flash_success', $this->message);
     }
 
     /**
