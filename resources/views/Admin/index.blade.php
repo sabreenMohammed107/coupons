@@ -98,7 +98,7 @@
                                         <?php $date = date_create($row->expired_date) ?>
                                         {{ date_format($date,'Y-m-d') }}</td>
 
-
+                                        <td >{{$row->coupon_code}}</td>
                                 </tr>
                                 @endforeach
 
