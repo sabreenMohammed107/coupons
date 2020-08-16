@@ -14,4 +14,8 @@ class Student_data extends Model
     {
         return $this->belongsToMany('App\Course', 'students_courses', 'student_id', 'course_id');
     }
+    public function duration()
+    {
+        return $this->belongsToMany('App\Duration', 'preferred_durations', 'student_id', 'duration_id');
+    }
 }

@@ -26,10 +26,17 @@
 
     <!--===============================================================================================-->
     <style>
-        td,th{
-            text-align: center;
+        th{
+            text-indent: 10px;
         }
-        </style>
+        .column1 {
+    width: 23%;
+    padding-left: 40px;
+}
+.column2 {
+    width: 10%;
+}
+    </style>
 </head>
 
 <body>
@@ -59,19 +66,20 @@
         </ul>
         <div class="container-table100">
             <div class="wrap-table100">
-                <div class="table100 ver1 m-b-110" style="overflow-x: scroll;">
+                <div class="table100 ver1 m-b-110">
                     <div class="table100-head">
                         <table>
                             <thead>
                                 <tr class="row100 head">
-                                    <th >Courses</th>
-                                    <th >Code</th>
-                                    <th >Discount</th>
-                                    <th>Name</th>
-                                    <th >Mobile</th>
-                                    <th>City</th>
-                                    <th >expird</th>
-                                    <th >Status</th>
+                                    <th class="cell100 column2">pay</th>
+                                    <th class="cell100 column1">Name</th>
+                                    <th class="cell100 column2">Mobile</th>
+                                    <th class="cell100 column1">Courses</th>
+                                    <th class="cell100 column1">Duration</th>
+                                    <th class="cell100 column2">Code -dis</th>
+                                    
+                                    <th class="cell100 column6">City</th>
+                                    <th class="cell100 column7">Notes</th>
 
 
                                 </tr>
@@ -79,26 +87,33 @@
                         </table>
                     </div>
 
-                    <div class="table100-body js-pscroll" >
+                    <div class="table100-body js-pscroll">
                         <table>
                             <tbody>
                                 @foreach($rows as $index=>$row)
-                                <tr >
+                                <tr class="row100 body">
+                                <td class="cell100 column2">@if($row->coupon_status==4)TRUE@else FALSE @endif</td>
+                                <td class="cell100 column1">{{$row->student->name ?? ''}}</td>
+                                <td class="cell100 column2">{{$row->student->mobile ?? ''}}</td>
+                                
                                     <?php
                                     $courses = $row->student->course()->get();
 
                                     ?>
-                                    <td >@foreach($courses as $course){{$course->course_name}},@endforeach</td>
-                                    <td >{{$row->coupon_code}}</td>
-                                    <td >{{$row->discount_per}}</td>
-                                    <td >{{$row->student->name ?? ''}}</td>
-                                    <td>{{$row->student->mobile ?? ''}}</td>
-                                    <td>{{$row->student->city ?? ''}}</td>
-                                    <td >
-                                        <?php $date = date_create($row->expired_date) ?>
-                                        {{ date_format($date,'Y-m-d') }}</td>
+                                    <td class="cell100 column2">@foreach($courses as $course){{$course->course_name}},@endforeach</td>
+                                   
+                                    <?php
+                                    $durations = $row->student->duration()->get();
 
-                                        <td >{{$row->coupon_code}}</td>
+                                    ?>
+                                    <td class="cell100 column2">@foreach($durations as $dur){{$dur->duration_text}},@endforeach</td>
+
+                                    <td class="cell100 column2">{{$row->coupon_code}} -{{$row->discount_per}}</td>
+                                     <td class="cell100 column2">{{$row->student->city ?? ''}}</td>
+                                    
+                                        <td class="cell100 column1">{{$row->adminNotes}}</td> 
+
+
                                 </tr>
                                 @endforeach
 
