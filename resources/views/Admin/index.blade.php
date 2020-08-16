@@ -25,6 +25,11 @@
     <!-- Scripts -->
 
     <!--===============================================================================================-->
+    <style>
+        td,th{
+            text-align: center;
+        }
+        </style>
 </head>
 
 <body>
@@ -54,18 +59,19 @@
         </ul>
         <div class="container-table100">
             <div class="wrap-table100">
-                <div class="table100 ver1 m-b-110">
+                <div class="table100 ver1 m-b-110" style="overflow-x: scroll;">
                     <div class="table100-head">
                         <table>
                             <thead>
                                 <tr class="row100 head">
-                                    <th class="cell100 column1">Courses</th>
-                                    <th class="cell100 column2">Code</th>
-                                    <th class="cell100 column3">Discount</th>
-                                    <th class="cell100 column4">Name</th>
-                                    <th class="cell100 column5">Mobile</th>
-                                    <th class="cell100 column6">City</th>
-                                    <th class="cell100 column7">expird</th>
+                                    <th >Courses</th>
+                                    <th >Code</th>
+                                    <th >Discount</th>
+                                    <th>Name</th>
+                                    <th >Mobile</th>
+                                    <th>City</th>
+                                    <th >expird</th>
+                                    <th >Status</th>
 
 
                                 </tr>
@@ -73,7 +79,7 @@
                         </table>
                     </div>
 
-                    <div class="table100-body js-pscroll">
+                    <div class="table100-body js-pscroll" >
                         <table>
                             <tbody>
                                 @foreach($rows as $index=>$row)
@@ -82,13 +88,13 @@
                                     $courses = $row->student->course()->get();
 
                                     ?>
-                                    <td class="cell100 column1">@foreach($courses as $course){{$course->course_name}},@endforeach</td>
-                                    <td class="cell100 column2">{{$row->coupon_code}}</td>
-                                    <td class="cell100 column3">{{$row->discount_per}}</td>
-                                    <td class="cell100 column4">{{$row->student->name ?? ''}}</td>
-                                    <td class="cell100 column5">{{$row->student->mobile ?? ''}}</td>
-                                    <td class="cell100 column6">{{$row->student->city ?? ''}}</td>
-                                    <td class="cell100 column7">
+                                    <td >@foreach($courses as $course){{$course->course_name}},@endforeach</td>
+                                    <td >{{$row->coupon_code}}</td>
+                                    <td >{{$row->discount_per}}</td>
+                                    <td >{{$row->student->name ?? ''}}</td>
+                                    <td>{{$row->student->mobile ?? ''}}</td>
+                                    <td>{{$row->student->city ?? ''}}</td>
+                                    <td >
                                         <?php $date = date_create($row->expired_date) ?>
                                         {{ date_format($date,'Y-m-d') }}</td>
 
