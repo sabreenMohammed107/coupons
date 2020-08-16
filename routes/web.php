@@ -21,3 +21,7 @@ Route::post('/fetch-result', 'StudentController@searchResult')->name('fetch-resu
 // Route::get('/', function () {
 //     return view('home.register');
 // });
+
+Auth::routes();
+Route::resource('/admin', 'AdminController');
+

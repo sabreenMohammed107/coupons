@@ -9,4 +9,9 @@ class Student_data extends Model
     protected $fillable = [
         'name', 'mobile', 'city','education','job','note'
     ];
+
+    public function course()
+    {
+        return $this->belongsToMany('App\Course', 'students_courses', 'student_id', 'course_id');
+    }
 }

@@ -9,8 +9,8 @@ use Faker\Generator as Faker;
 $factory->define(App\Coupon_data::class, function (Faker $faker) {
     return [
         'coupon_code' => strtolower(str_random(5)),
-        'discount_per' =>(int)$faker->boolean(80)? 15 : 20,
-        'expired_date' => Carbon::parse('2015-08-30'),
+        'discount_per' =>(int)$faker->boolean(60)? 15 : 20,
+        'expired_date' => Carbon::parse('2020-08-22'),
         'coupon_status' => 1,
     ];
 });
