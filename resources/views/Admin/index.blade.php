@@ -30,7 +30,7 @@
             text-indent: 10px;
         }
         .column1 {
-    width: 23%;
+    width: 20%;
     padding-left: 40px;
 }
 .column2 {
@@ -72,14 +72,14 @@
                             <thead>
                                 <tr class="row100 head">
                                     <th class="cell100 column2">pay</th>
-                                    <th class="cell100 column1">Name</th>
+                                    <th class="cell100 column2">Name</th>
                                     <th class="cell100 column2">Mobile</th>
                                     <th class="cell100 column1">Courses</th>
                                     <th class="cell100 column1">Duration</th>
                                     <th class="cell100 column2">Code -dis</th>
                                     
-                                    <th class="cell100 column6">City</th>
-                                    <th class="cell100 column7">Notes</th>
+                                    <th class="cell100 column2">City</th>
+                                    <th class="cell100 column1">Notes</th>
 
 
                                 </tr>
@@ -93,20 +93,20 @@
                                 @foreach($rows as $index=>$row)
                                 <tr class="row100 body">
                                 <td class="cell100 column2">@if($row->coupon_status==4)TRUE@else FALSE @endif</td>
-                                <td class="cell100 column1">{{$row->student->name ?? ''}}</td>
+                                <td class="cell100 column2">{{$row->student->name ?? ''}}</td>
                                 <td class="cell100 column2">{{$row->student->mobile ?? ''}}</td>
                                 
                                     <?php
                                     $courses = $row->student->course()->get();
 
                                     ?>
-                                    <td class="cell100 column2">@foreach($courses as $course){{$course->course_name}},@endforeach</td>
+                                    <td class="cell100 column1">@foreach($courses as $course){{$course->course_name}},@endforeach</td>
                                    
                                     <?php
                                     $durations = $row->student->duration()->get();
 
                                     ?>
-                                    <td class="cell100 column2">@foreach($durations as $dur){{$dur->duration_text}},@endforeach</td>
+                                    <td class="cell100 column1">@foreach($durations as $dur){{$dur->duration_text}},@endforeach</td>
 
                                     <td class="cell100 column2">{{$row->coupon_code}} -{{$row->discount_per}}</td>
                                      <td class="cell100 column2">{{$row->student->city ?? ''}}</td>
