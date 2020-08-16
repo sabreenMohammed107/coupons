@@ -108,7 +108,7 @@
                             <tbody>
                                 @foreach($rows as $index=>$row)
                                 <tr class="row100 body">
-                                    <td class="cell100 column2">@if($row->coupon_status===4)<i class="fa fa-check"></i> @else <i class="fa fa-times"></i> @endif</td>
+                                    <td class="cell100 column2">@if($row->coupon_status==4)<i class="fa fa-check"></i> @else <i class="fa fa-times"></i> @endif</td>
                                     <td class="cell100 column2">
                                         <a href="#" data-toggle="modal" data-target="#addSubCat{{$row->id}}">{{$row->student->name ?? ''}}</a>
                                     </td>
