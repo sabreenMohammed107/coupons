@@ -92,7 +92,8 @@ class AdminController extends Controller
 
         ];
 
-        if ($request->input('coupon_status') !== 4) {
+        if ($request->input('coupon_status') != 4) {
+
             $data['coupon_status'] = 2;
         }
         $coupon->update($data);
