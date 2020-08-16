@@ -165,13 +165,18 @@
                                                                 <div class="col-md-12 mb-3">
                                                                     <div class="form-group">
                                                                         <label class="exampleInputPassword1" for="exampleCheck1">Notes</label>
-                                                                        <textarea name="adminNotes" id="newClint" class="form-control" placeholder="Notes" rows="3"></textarea>
+                                                                        <textarea name="adminNotes" id="newClint" class="form-control" placeholder="Notes" rows="3">{{$row->adminNotes}}</textarea>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-12 mb-3">
                                                                     <div class="form-group">
                                                                         <label>
+                                                                            @if($row->coupon_status===4)
+                                                                            <input type="checkbox" name="coupon_status" value="4" class="i-checks" checked> Pay
+                                                                            @else
                                                                             <input type="checkbox" name="coupon_status" value="4" class="i-checks"> Pay
+
+                                                                            @endif
                                                                         </label>
                                                                     </div>
                                                                 </div>
