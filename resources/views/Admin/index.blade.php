@@ -171,7 +171,7 @@
                                                                 <div class="col-md-12 mb-3">
                                                                     <div class="form-group">
                                                                         <label>
-                                                                            @if($row->coupon_status===4)
+                                                                            @if($row->coupon_status==4)
                                                                             <input type="checkbox" name="coupon_status" value="4" class="i-checks" checked> Pay
                                                                             @else
                                                                             <input type="checkbox" name="coupon_status" value="4" class="i-checks"> Pay
