@@ -83,7 +83,7 @@
                         <table>
                             <tbody>
                                 @foreach($rows as $index=>$row)
-                                <tr class="row100 body">
+                                <tr >
                                     <?php
                                     $courses = $row->student->course()->get();
 
