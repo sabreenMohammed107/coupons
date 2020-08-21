@@ -98,14 +98,19 @@
             </div>
         </div>
         @endif
+<!--
+    {{--
+                    <input type="text" name="mobile" value="{{ old('mobile') }}" id="phone" pattern="[0]{1}[0-9]{10}" title="Phone number with 0 and remaing 10 digit with 0-9" placeholder="رقم التليفون (يفضل رقم الواتساب)" required />
 
+    --}}
+    -->
 
         <form method="POST" action="{{route('home.store')}}" class="appointment-form" autocomplete="off">
             {{ csrf_field() }}
             <h2 style="text-align:center;margin-bottom: 10px;"> احصل على كوبون خصم </h2>
             <div class="form-group-1">
                 <input type="text" name="name" id="name" pattern="[^0-9]*" placeholder="الإسم بالكامل" required />
-                <input type="text" name="mobile" value="{{ old('mobile') }}" id="phone" pattern="[0]{1}[0-9]{10}" title="Phone number with 0 and remaing 10 digit with 0-9" placeholder="رقم التليفون (يفضل رقم الواتساب)" required />
+                <input type="text" name="mobile" value="{{ old('mobile') }}" id="phone"   placeholder="رقم التليفون (يفضل رقم الواتساب)" required />
                 <input type="text" name="job" id="job" placeholder="الوظيفه" />
 
                 <input type="text" name="education" id="education" placeholder="الدراسة" />
