@@ -94,7 +94,7 @@
                                     <th class="cell100 column1">Courses</th>
                                     <th class="cell100 column1">Duration</th>
                                     <th class="cell100 column2">Code - %</th>
-
+                                    <th class="cell100 column1">Expierd</th>
                                     <th class="cell100 column2">City</th>
                                     <th class="cell100 column1">Notes</th>
 
@@ -125,9 +125,18 @@
                                     $durations = $row->student->duration()->get();
 
                                     ?>
-                                    <td class="cell100 column1">@foreach($durations as $dur){{$dur->duration_text}},@endforeach</td>
+                                    <td class="cell100 column2">@foreach($durations as $dur){{$dur->duration_text}},@endforeach</td>
 
                                     <td class="cell100 column2">{{$row->coupon_code}} -{{$row->discount_per}}</td>
+                                    <td class="cell100 column2">
+                                    <?php
+                                    $date=null;
+  if($row->expired_date){
+    $date = date_create($row->expired_date) ;
+
+  }
+  ?>
+  @if($date){{ date_format($date,"d-m-Y")  }}@endif   </td>
                                     <td class="cell100 column2">{{$row->student->city ?? ''}}</td>
 
                                     <td class="cell100 column1">{{$row->adminNotes}}</td>
