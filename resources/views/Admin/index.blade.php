@@ -94,7 +94,7 @@
                                     <th class="cell100 column1">Courses</th>
                                     <th class="cell100 column1">Duration</th>
                                     <th class="cell100 column2">Code - %</th>
-                                    <th class="cell100 column1">Expierd</th>
+                                    <th class="cell100 column1">Expired on</th>
                                     <th class="cell100 column2">City</th>
                                     <th class="cell100 column1">Notes</th>
 
