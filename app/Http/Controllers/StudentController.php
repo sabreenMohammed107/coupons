@@ -73,11 +73,16 @@ class StudentController extends Controller
             'job' => $request->input('job'),
             'note' => $request->input('note'),
         ];
+
+
+
         $durations = $request->input('dur');
         $courses = $request->input('course');
         $randomCoupon = Coupon_data::where('coupon_status', 1)->inRandomOrder()->first();
         $phoneExtist = Coupon_data::with('student')->where('coupon_status', 2)->whereNotNull('student_id')->get();
         $count = 0;
+
+        
         foreach ($phoneExtist as  $extist) {
 
             $testing = $extist->student()->get();
@@ -129,11 +134,16 @@ class StudentController extends Controller
             return redirect()->route($this->routeName . 'index')->with('flash_success', 'لايوجد كوبون خصم حاليا !');
         }
     }
+
+
     public function search()
     {
         $coupon = new Coupon_data();
         return view('home.search', compact('coupon'));
     }
+
+
+
     public function searchResult(Request $request)
     {
         $mobile = $request->input('phone');
