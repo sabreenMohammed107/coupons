@@ -95,15 +95,16 @@ thead{
                 <table id="courseEval" class="dattable table table-striped thead-dark  w-100">
                     <thead >
                         <tr class="row100 head">
-                            <th class="cell100 column2">pay</th>
-                            <th class="cell100 column2">Name</th>
-                            <th class="cell100 column2">Mobile</th>
-                            <th class="cell100 column1">Courses</th>
-                            <th class="cell100 column1">Duration</th>
-                            <th class="cell100 column2">Code - %</th>
-                            <th class="cell100 column1">Expired on</th>
-                            <th class="cell100 column2">City</th>
-                            <th class="cell100 column1">Notes</th>
+                            <th >pay</th>
+                            <th >Name</th>
+                            <th>Mobile</th>
+                            <th >Courses</th>
+                            <th >Duration</th>
+                            <th >Assign Date</th>
+                            <th >Code-%</th>
+                            <th >Expired </th>
+                            <th >City</th>
+                            <th >Notes</th>
 
 
                         </tr>
@@ -128,7 +129,13 @@ thead{
 
                             ?>
                             <td class="cell100 column2">@foreach($durations as $dur){{$dur->duration_text}},@endforeach</td>
-
+<td><?php
+                                $date = null;
+                                if ($row->expired_date) {
+                                    $date2 = date_create($row->assign_date);
+                                }
+                                ?>
+                                @if($date2){{ date_format($date2,"d-m-Y")  }}@endif</td> 
                             <td class="cell100 column2">{{$row->coupon_code}} -{{$row->discount_per}}</td>
                             <td class="cell100 column2">
                                 <?php
