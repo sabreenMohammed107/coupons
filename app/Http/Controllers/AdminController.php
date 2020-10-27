@@ -28,7 +28,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $rows = Coupon_data::with('student')->whereNotNull('student_id')->orderBy("coupon_status", "Asc")->get();
+        $rows = Coupon_data::with('student')->whereNotNull('student_id')->orderBy("assign_date", "Desc")->get();
         return view($this->viewName . 'index', compact('rows'));
     }
 
