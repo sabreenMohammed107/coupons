@@ -56,8 +56,7 @@ body {
   <hr>
   <p style="color:#73AD21; font-size:20px"><b>  خصم : </b>{{$randomCoupon->discount_per}} %.</p>
 
-  <?php $date = date_create($randomCoupon->expired_date) ?>
-  <p style="color:red; font-size:16px">سوف ينتهى فى :  {{ date_format($date,"d-m-Y") }}</p>
+  
   <hr>
     <div class="form-submit" style="margin:30px 0;">
                 <a style="text-decoration: none;font-size:16px" href="{{route('home.index')}}" class="submit"  > احصل على كوبون خصم اخر</a>

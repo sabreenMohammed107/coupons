@@ -73,7 +73,7 @@
     <div class="container" style="direction: rtl;width: 686px !important">
         <div style="width:100%;">
             <div style="display: inline-block;width:40%">
-                <img src="{{ asset('webasset/images/logo.jpg')}}" style="width:200px;hieght:200px">
+                <img src="{{ asset('webasset/images/senior logo_fin.jpg')}}" style="width:250px;hieght:250px">
 
             </div>
 
@@ -157,11 +157,11 @@
         <!-- <a href="https://api.whatsapp.com/send?phone=15551234567&text=I'm%20interested%20in%20your%20car%20for%20sale" class="float" target="_blank">
             <i class="fa fa-whatsapp my-float"></i>
         </a> -->
-        <a href="https://www.facebook.com/seniorsteps.it/" target="_blank" class="float2">
-        <i style="margin: 3px 10px; padding: 7px 10px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-facebook my-float faSize"></i>
+        <a href="https://www.facebook.com/seniorsteps.it/" target="_blank" class="float2" style="text-align: right;">
+        <i style="margin: 3px 10px; padding: 3px 7px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-facebook my-float faSize"></i>
         </a>
        <span class="resSpan" >
-        <i style="margin: 3px 10px; padding: 7px 10px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-phone my-float "></i>01097003465
+        <i style="margin: 3px 10px; padding: 7px 10px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-phone my-float "></i>01097003465 - 01090873748
 </span>
 </footer>
             </div>
