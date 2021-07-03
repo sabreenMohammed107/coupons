@@ -68,9 +68,9 @@ class StudentController extends Controller
         $data = [
             'name' => $request->input('name'),
             'mobile' => $request->input('mobile'),
-            'city' => $request->input('city'),
+            // 'city' => $request->input('city'),
             'education' => $request->input('education'),
-            'job' => $request->input('job'),
+            // 'job' => $request->input('job'),
             'note' => $request->input('note'),
         ];
 

@@ -111,10 +111,10 @@
             <div class="form-group-1">
                 <input type="text" name="name" id="name" pattern="[^0-9]*" placeholder="الإسم بالكامل" required />
                 <input type="text" name="mobile" value="{{ old('mobile') }}" id="phone"   placeholder="رقم التليفون (يفضل رقم الواتساب)" required />
-                <input type="text" name="job" id="job" placeholder="الوظيفه" />
+                <!-- <input type="text" name="job" id="job" placeholder="الوظيفه" /> -->
 
-                <input type="text" name="education" id="education" placeholder="الدراسة" />
-                <input type="text" name="city" id="city" placeholder="المحافظة /الدولة" />
+                <input type="text" name="education" id="education" placeholder="الفرقة" />
+                <!-- <input type="text" name="city" id="city" placeholder="المحافظة /الدولة" /> -->
 
             </div>
             <div jscontroller="sWGJ4b" jsaction="EEvAHc:yfX9oc;" class="freebirdFormviewerComponentsQuestionBaseRoot">
