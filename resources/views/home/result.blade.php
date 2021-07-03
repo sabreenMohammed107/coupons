@@ -6,15 +6,8 @@
 </p>
   <p style="color:red; font-size:20px;margin-top:0"><b>قيمة الخصم : </b><span  id="couponPer">{{$coupon->discount_per}}</span> %.</p>
  <p style="color:#73AD21; font-size:20px;margin-top:0"><b>على رقم الموبايل : </b><span  id="couponMobile">{{$coupon->student->mobile ?? ''}}</span></p>
-  <hr>
-  <?php 
-  $date=null;
-  if($coupon->expired_date){
-    $date = date_create($coupon->expired_date) ;
-
-  }
-  ?>
-  <p style="color:red; font-size:16px">سوف ينتهى فى :<span id="couponDate"> @if($date){{ date_format($date,"d-m-Y")  }}@endif</span></p>
+  
+ 
 		</div></div>
 		
                
@@ -32,7 +25,7 @@
         <i style="margin: 3px 10px; padding: 7px 10px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-facebook my-float faSize"></i>
         </a>
        <span class="resSpan" >
-        <i style="margin: 3px 10px; padding: 7px 10px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-phone my-float "></i>01097003465
+        <i style="margin: 3px 10px; padding: 7px 10px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-phone my-float "></i>01097003465  - 01090873748
 </span>
 </footer>
             </div>     
