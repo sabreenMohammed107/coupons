@@ -36,13 +36,13 @@ class StudentController extends Controller
      */
     public function home()
     {
-        $durations = Duration::all();
+        $durations = Duration::whereNot('id', '=', 3)->get();
         $courses = Course::limit(10)->get();
         return view('home.register', compact('durations', 'courses'));
     }
     public function index()
     {
-        $durations = Duration::all();
+        $durations = Duration::whereNot('id', '=', 3)->get();
         $courses = Course::limit(10)->get();
         return view('home.register', compact('durations', 'courses'));
     }
