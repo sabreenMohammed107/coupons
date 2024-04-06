@@ -1,5 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\StudentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,11 +15,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'StudentController@home');
+Route::get('/', [StudentController::class, 'home']);
 
-Route::resource('/home', 'StudentController');
-Route::get('/search', 'StudentController@search')->name('search');
-Route::post('/fetch-result', 'StudentController@searchResult')->name('fetch-result');
+Route::resource('/home', StudentController::class);
+Route::get('/search', [StudentController::class, 'search'])->name('search');
+Route::post('/fetch-result', [StudentController::class, 'searchResult'])->name('fetch-result');
 
 
 
@@ -23,5 +28,4 @@ Route::post('/fetch-result', 'StudentController@searchResult')->name('fetch-resu
 // });
 
 Auth::routes();
-Route::resource('/admin', 'AdminController');
-
+Route::resource('/admin', AdminController::class);

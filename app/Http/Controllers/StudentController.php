@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Coupon_data;
-use App\Duration;
-use App\Course;
-use App\Student_data;
-use App\Preferred_duration;
-use App\Students_course;
+use App\Models\Coupon_data;
+use App\Models\Duration;
+use App\Models\Course;
+use App\Models\Student_data;
+use App\Models\Preferred_duration;
+use App\Models\Students_course;
 
 use DB;
 use Log;
@@ -82,7 +82,7 @@ class StudentController extends Controller
         $phoneExtist = Coupon_data::with('student')->where('coupon_status', 2)->whereNotNull('student_id')->get();
         $count = 0;
 
-        
+
         foreach ($phoneExtist as  $extist) {
 
             $testing = $extist->student()->get();

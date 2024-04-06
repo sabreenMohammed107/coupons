@@ -12,7 +12,7 @@ class CouponSeeder extends Seeder
     public function run()
     {
         $count = 100;
-        factory(App\Coupon_data::class, $count)->create();
-        
+        factory(App\Models\Coupon_data::class, $count)->create();
+
     }
 }

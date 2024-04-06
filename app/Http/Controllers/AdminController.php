@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Coupon_data;
+use App\Models\Coupon_data;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
