@@ -151,9 +151,13 @@
                 </label>
             </div>
             <div class="form-submit">
-           <input type="submit" name="submit" id="submit" class="submit" style="font-size:16px" value=" احصل على كوبون الخصم" > <i class="fa fa-arrow-alt-circle-left fa-2x"></i> 
+           <input type="submit" name="submit" id="submit" class="submit" style="font-size:16px;margin-bottom:0 !important" value=" احصل على كوبون الخصم" > <i class="fa fa-arrow-alt-circle-left fa-2x"></i> 
             </div>
+            <div class="form-check" >
+            <a href="#" class="label-agree-term" style="font-weight:bold;font-size:18px" >محتوي الدورات بالتفصيل </a>
+        </div>
         </form>
+       
         <div class="footer">
         <footer class="footer">
         <!-- <a href="https://api.whatsapp.com/send?phone=15551234567&text=I'm%20interested%20in%20your%20car%20for%20sale" class="float" target="_blank">
