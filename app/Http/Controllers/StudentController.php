@@ -2,18 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Coupon_data;
-use App\Models\Duration;
 use App\Models\Course;
-use App\Models\Student_data;
+use App\Models\Duration;
 use App\Models\Preferred_duration;
 use App\Models\Students_course;
-
-use DB;
-use Log;
+use App\Models\Student_data;
 use Carbon\Carbon;
-use Illuminate\Database\QueryException;
+use DB;
+use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
@@ -36,13 +33,13 @@ class StudentController extends Controller
      */
     public function home()
     {
-        $durations = Duration::where('id', '<>', 3)->get();
+        $durations = Duration::get();
         $courses = Course::limit(11)->get();
         return view('home.register', compact('durations', 'courses'));
     }
     public function index()
     {
-        $durations = Duration::where('id', '<>', 3)->get();
+        $durations = Duration::get();
         $courses = Course::limit(11)->get();
         return view('home.register', compact('durations', 'courses'));
     }
@@ -68,36 +65,44 @@ class StudentController extends Controller
         $data = [
             'name' => $request->input('name'),
             'mobile' => $request->input('mobile'),
+            'id_number' => $request->input('id_number'),
             // 'city' => $request->input('city'),
             'education' => $request->input('education'),
             // 'job' => $request->input('job'),
             'note' => $request->input('note'),
         ];
 
-
-
         $durations = $request->input('dur');
         $courses = $request->input('course');
         $randomCoupon = Coupon_data::where('coupon_status', 1)->inRandomOrder()->first();
         $phoneExtist = Coupon_data::with('student')->where('coupon_status', 2)->whereNotNull('student_id')->get();
+
         $count = 0;
+        $idCount = 0;
 
-
-        foreach ($phoneExtist as  $extist) {
+        foreach ($phoneExtist as $extist) {
 
             $testing = $extist->student()->get();
             foreach ($testing as $xx) {
-                if ($xx->mobile == $request->input('mobile'))
+                if ($xx->mobile == $request->input('mobile')) {
                     $count = $count + 1;
+                }
+
+                if ($xx->id_number == $request->input('id_number')) {
+                    $idCount = $idCount + 1;
+                }
+
             }
         }
+
         if ($randomCoupon) {
             if ($count > 0) {
                 return redirect()->back()->withInput()->with('flash_success', 'لديك خصم على هذا الرقم ابحث عن الكوبون !');
-            } else {
-
-
-                DB::transaction(function () use ($data, $durations, $courses, $randomCoupon, $request) {
+            }
+            if ($idCount > 0) {
+                return redirect()->back()->withInput()->with('flash_success', 'لديك خصم على هذا ال ID ابحث عن الكوبون !');
+            }
+             DB::transaction(function () use ($data, $durations, $courses, $randomCoupon, $request) {
 
                     $student = Student_data::create($data);
                     if ($durations) {
@@ -128,13 +133,12 @@ class StudentController extends Controller
                 });
 
                 return view('home.cong', compact('randomCoupon'));
-            }
+            
         } else {
 
             return redirect()->route($this->routeName . 'index')->with('flash_success', 'لايوجد كوبون خصم حاليا !');
         }
     }
-
 
     public function search()
     {
@@ -142,12 +146,10 @@ class StudentController extends Controller
         return view('home.search', compact('coupon'));
     }
 
-
-
     public function searchResult(Request $request)
     {
-        $mobile = $request->input('phone');
-        $students = Student_data::where('mobile', $mobile)->get();
+        $id_number = $request->input('id_number');
+        $students = Student_data::where('id_number', $id_number)->get();
         foreach ($students as $student) {
 
             $coupon = Coupon_data::where('coupon_status', 2)->where('student_id', $student->id)->first();

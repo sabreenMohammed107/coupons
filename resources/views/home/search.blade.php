@@ -87,9 +87,9 @@
             <input type="hidden" value="{{csrf_token()}}" id="catToken" />
             <h2 style="text-align:center;margin-bottom: 10px;">البحث عن كوبون الخصم</h2>
             <div class="form-group-1">
-                <input type="text" name="phone" id="phone" placeholder="رقم الموبايل المسجل " required />
+                <input type="text" name="id_number" id="id_number" placeholder=" ID المعهد المسجل " required />
 
-                <span id="phonerror" style="color:red;background:#ccc;text-align:center;margin-bottom:20px;display:none">يجب ان تدخل رقم الموبايل </span>
+                <span id="id_numbererror" style="color:red;background:#ccc;text-align:center;margin-bottom:20px;display:none">يجب ان تدخل ID المعهد </span>
                 <span id="rrorResult" style="color:red;background:#ccc;text-align:center;margin-bottom:20px;display:none">هذا الرقم غير مسجل /او لايوجد لديه  كوبونات مفعلة</span>
 
 
@@ -111,17 +111,17 @@
                 $('#search_button').click(function() {
                     event.preventDefault();
                     var token = $("#catToken").val();
-                    var OR = document.getElementById("phone").value;
+                    var OR = document.getElementById("id_number").value;
                     if (OR == '') {
-                        $('#phonerror').css('display', 'block');
+                        $('#id_numbererror').css('display', 'block');
                     } else {
-                        $('#phonerror').css('display', 'none');
+                        $('#id_numbererror').css('display', 'none');
                         $.ajax({
                             type: 'POST',
                             url: "{{route('fetch-result')}}",
                             data: {
                                 _token: token,
-                                phone: $('#phone').val(),
+                                id_number: $('#id_number').val(),
 
                             },
                             success: function(result) {
