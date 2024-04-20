@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Coupon_data;
+use App\Models\CouponFactoy;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,7 +13,7 @@ class CouponsSeeder extends Seeder
     public function run(): void
     {
         $count = 100;
-        Coupon_data::factory()->count(100)->create();
+        CouponFactoy::factory()->count(100)->create();
     //    Coupon_data::factory(100)->create();
     }
 }

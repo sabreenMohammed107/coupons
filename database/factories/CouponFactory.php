@@ -24,7 +24,7 @@ class Coupon_dataFactory extends Factory
     {
 return [
         'coupon_code' => $this->strtolower(str_random(5)),
-        'discount_per' => $this->(int)$faker->boolean(60) ? 15 : 20,
+        'discount_per' => (int)$this->$faker->boolean(60) ? 15 : 20,
         'expired_date' => $this->Carbon::parse('2021-08-25'),
         'coupon_status' => 1,
         'name' => $this->faker->name,

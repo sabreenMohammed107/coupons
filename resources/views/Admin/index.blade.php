@@ -7,27 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{{ asset('adminasset/images/icons/favicon.ico')}}" />
+    <link rel="icon" type="image/png" href="{{ asset('public/adminasset/images/icons/favicon.ico')}}" />
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('adminasset/vendor/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/adminasset/vendor/bootstrap/css/bootstrap.min.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('adminasset/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/adminasset/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('adminasset/vendor/animate/animate.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/adminasset/vendor/animate/animate.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('adminasset/vendor/select2/select2.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/adminasset/vendor/select2/select2.min.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('adminasset/vendor/perfect-scrollbar/perfect-scrollbar.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/adminasset/vendor/perfect-scrollbar/perfect-scrollbar.css')}}">
     <!--===============================================================================================-->
     <!-- Page Specific CSS (Slick Slider.css) -->
-    <link href="{{ asset('adminasset/css/datatables.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('adminasset/css/slick.css')}}" rel="stylesheet">
-    <link href="{{ asset('adminasset/css/select2.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('public/adminasset/css/datatables.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('public/adminasset/css/slick.css')}}" rel="stylesheet">
+    <link href="{{ asset('public/adminasset/css/select2.min.css')}}" rel="stylesheet">
     <!-- ====================================================================================== -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('adminasset/css/util.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('adminasset/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/adminasset/css/util.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/adminasset/css/main.css')}}">
 
 
     <!-- Scripts -->
@@ -239,17 +239,17 @@ thead{
 
 
     <!--===============================================================================================-->
-    <script src="{{ asset('adminasset/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{ asset('public/adminasset/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
     <!--===============================================================================================-->
-    <script src="{{ asset('adminasset/vendor/bootstrap/js/popper.js')}}"></script>
-    <script src="{{ asset('adminasset/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('public/adminasset/vendor/bootstrap/js/popper.js')}}"></script>
+    <script src="{{ asset('public/adminasset/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
     <!--===============================================================================================-->
-    <script src="{{ asset('adminasset/vendor/select2/select2.min.js')}}"></script>
+    <script src="{{ asset('public/adminasset/vendor/select2/select2.min.js')}}"></script>
     <!--===============================================================================================-->
-    <script src="{{ asset('adminasset/vendor/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
+    <script src="{{ asset('public/adminasset/vendor/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
     <!-- Page Specific Scripts Start -->
-    <script src="{{ asset('adminasset/js/datatables.min.js')}}"> </script>
-    <script src="{{ asset('adminasset/js/data-tables.js')}}"> </script>
+    <script src="{{ asset('public/adminasset/js/datatables.min.js')}}"> </script>
+    <script src="{{ asset('public/adminasset/js/data-tables.js')}}"> </script>
     <!-- Page Specific Scripts End -->
     <script>
         $('.js-pscroll').each(function() {
@@ -261,7 +261,7 @@ thead{
         });
     </script>
     <!--===============================================================================================-->
-    <script src="{{ asset('adminasset/js/main.js')}}"></script>
+    <script src="{{ asset('public/adminasset/js/main.js')}}"></script>
 
 
 </body>

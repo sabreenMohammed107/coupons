@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 namespace Database\Factories;
 
@@ -24,4 +24,4 @@ class Coupon_dataFactory extends Factory
             'coupon_status' => 1,
         ];
     }
-}
+} -->

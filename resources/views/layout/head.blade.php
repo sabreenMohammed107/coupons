@@ -7,11 +7,11 @@
     <title>Sign Up Form</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="{{ asset('webasset/fonts/material-icon/css/material-design-iconic-font.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('public/webasset/fonts/material-icon/css/material-design-iconic-font.min.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="{{ asset('webasset/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('public/webasset/css/style.css')}}">
     <!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
