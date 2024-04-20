@@ -154,7 +154,7 @@
            <input type="submit" name="submit" id="submit" class="submit" style="font-size:16px;margin-bottom:0 !important" value=" احصل على كوبون الخصم" > <i class="fa fa-arrow-alt-circle-left fa-2x"></i> 
             </div>
             <div class="form-check" >
-            <a href="#" class="label-agree-term" style="font-weight:bold;font-size:18px" >محتوي الدورات بالتفصيل </a>
+            <a href="https://drive.google.com/drive/folders/1FJrDLkEZmlzyg7XgpXeHS7t9RNCjkkIX" target="_blank" class="label-agree-term" style="font-weight:bold;font-size:18px" >محتوي الدورات بالتفصيل </a>
         </div>
         </form>
        
