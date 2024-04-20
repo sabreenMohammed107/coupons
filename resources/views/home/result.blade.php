@@ -16,17 +16,21 @@
 </label>
             </div>
             <div class="footer">
-        <footer class="footer">
+        <footer class="footer" style="display: flex;">
         <!-- <a href="https://api.whatsapp.com/send?phone=15551234567&text=I'm%20interested%20in%20your%20car%20for%20sale" class="float" target="_blank">
             <i class="fa fa-whatsapp my-float"></i>
         </a> -->
         
-        <a href="https://www.facebook.com/seniorsteps.it/" target="_blank" class="float2">
-        <i style="margin: 3px 10px; padding: 7px 10px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-facebook my-float faSize"></i>
+        <div style="width: 45%;display:inline-block">
+        <a href="https://www.facebook.com/seniorsteps.it/" target="_blank" class="float2" style="text-align: right;">
+        <i style="margin: 3px 10px; padding: 3px 7px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-facebook my-float faSize"></i>
         </a>
+        </div>
+        <div >
        <span class="resSpan" >
-        <i style="margin: 3px 10px; padding: 7px 10px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-phone my-float "></i>01097003465  - 01090873748
+        <i style="margin: 3px 10px; padding: 7px 10px;border: 2px solid #161c3b;border-radius: 50%;color: #161c3b;" class="fa fa-phone my-float "></i>01097003465 - 01090873748
 </span>
+        </div>
 </footer>
             </div>     
         </div>
