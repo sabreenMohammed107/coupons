@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 
 namespace Database\Factories;
 
@@ -17,11 +17,13 @@ class Coupon_dataFactory extends Factory
      */
     public function definition(): array
     {
+        $discountPercentage = $this->faker->randomElement([10, 15, 20]);
         return [
             'coupon_code' => Str::random(5),
-            'discount_per' => $this->faker->boolean(60) ? 15 : 20,
-            'expired_date' => Carbon::parse('2024-08-25'),
+            // 'discount_per' => $this->faker->boolean(60) ? 15 : 20,
+            'discount_per' =>  $discountPercentage,
+            'expired_date' => Carbon::parse('2024-05-20'),
             'coupon_status' => 1,
         ];
     }
-} -->
+} 
