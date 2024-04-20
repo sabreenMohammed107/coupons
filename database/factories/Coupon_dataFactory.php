@@ -17,7 +17,7 @@ class Coupon_dataFactory extends Factory
      */
     public function definition(): array
     {
-        $discountPercentage = $this->faker->randomElement([10, 15, 20]);
+        $discountPercentage = $this->faker->randomElement([5 , 10, 15, 20]);
         return [
             'coupon_code' => Str::random(5),
             // 'discount_per' => $this->faker->boolean(60) ? 15 : 20,
