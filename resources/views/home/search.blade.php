@@ -110,17 +110,17 @@
             $(document).ready(function() {
                 $('#search_button').click(function() {
                     event.preventDefault();
-                    var token = $("#catToken").val();
+                   
                     var OR = document.getElementById("id_number").value;
                     if (OR == '') {
                         $('#id_numbererror').css('display', 'block');
                     } else {
                         $('#id_numbererror').css('display', 'none');
                         $.ajax({
-                            type: 'POST',
+                            type: 'GET',
                             url: "{{route('fetch-result')}}",
                             data: {
-                                _token: token,
+                              
                                 id_number: $('#id_number').val(),
 
                             },
